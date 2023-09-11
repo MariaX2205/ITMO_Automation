@@ -12,16 +12,13 @@ class Car():
         else:
             print('Автомобиль заглушен')
 
-    def type(self):
-        return self.type
+    def add_type(self, type_new):
+        self.type=type_new
 
-    def year(self):
-        return self.year
+    def add_year(self, year_new):
+        self.year=year_new
 
-    def color(self):
-        return self.color
+    def add_color(self, color_new):
+        self.color=color_new
 
 
-c = Car('Ford', '2020', 'white', '1')
-c.start()
-print('Автомобиль: ', c.type, c.year, c.color)

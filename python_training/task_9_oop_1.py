@@ -1,4 +1,5 @@
-class Input:
+from task_9_checks import Check
+class Input(Check):
 
     def __init__(self, loc, text):
         self.loc = loc
@@ -6,9 +7,9 @@ class Input:
 
 
 search = Input('text', 'name')
-print(search.loc)
+print(search.loc, search.text)
 
-class Button:
+class Button(Check):
 
     def __init__(self, text, loc):
         self.text = text
@@ -17,14 +18,14 @@ class Button:
 press = Button('text', 'locator')
 print(press.text, press.loc)
 
-class Title:
+class Title(Check):
     def __init__(self, text, loc):
         self.text = text
         self.loc = loc
 write = Title("this is a ", "new Title")
 print(write.text, write.loc)
 
-class Link:
+class Link(Check):
 
     def __init__(self, text, loc):
         self.text = text
